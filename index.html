@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Renata Studio</title>
+
+<style>
+/* ---------- ROOT COLORS ---------- */
+:root {
+--bg-dark: #0b0614;
+--bg-mid: #160a2b;
+--neon: #a970ff;
+--neon-soft: #7b4dff;
+--text-main: #e6e1f0;
+--card-bg: rgba(40, 20, 80, 0.5);
+}
+
+/* ---------- GLOBAL ---------- */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Segoe UI", sans-serif;
+}
+
+body {
+background: linear-gradient(to bottom, var(--bg-dark), var(--bg-mid));
+color: var(--text-main);
+}
+
+/* ---------- NAVBAR ---------- */
+nav {
+position: fixed;
+top: 0;
+width: 100%;
+height: 70px;
+background: rgba(15, 8, 30, 0.6);
+backdrop-filter: blur(8px);
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 40px;
+z-index: 1000;
+}
+
+nav h1 {
+font-size: 20px;
+color: var(--neon);
+}
+
+nav a {
+color: var(--text-main);
+text-decoration: none;
+margin-left: 25px;
+position: relative;
+}
+
+nav a::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: -6px;
+width: 0;
+height: 2px;
+background: var(--neon);
+transition: 0.3s;
+}
+
+nav a:hover::after {
+width: 100%;
+}
+
+/* ---------- MAIN OFFSET ---------- */
+main {
+padding-top: 90px; /* fixes navbar overlap */
+}
+
+/* ---------- HERO ---------- */
+.hero {
+padding: 100px 60px;
+}
+
+.hero h2 {
+font-size: 48px;
+margin-bottom: 20px;
+}
+
+.hero p {
+max-width: 600px;
+opacity: 0.85;
+margin-bottom: 30px;
+}
+
+.hero-btn {
+background: transparent;
+border: 2px solid var(--neon);
+color: var(--text-main);
+padding: 12px 28px;
+margin-right: 15px;
+border-radius: 25px;
+cursor: pointer;
+transition: 0.3s;
+box-shadow: 0 0 0px var(--neon);
+text-decoration: none;
+display: inline-block;
+}
+
+.hero-btn:hover {
+box-shadow: 0 0 15px var(--neon);
+background: rgba(169,112,255,0.1);
+}
+
+/* ---------- SECTION ---------- */
+.section {
+padding: 80px 60px;
+}
+
+/* ---------- CARD ---------- */
+.card {
+background: var(--card-bg);
+border-radius: 20px;
+padding: 40px;
+box-shadow: 0 0 20px rgba(169,112,255,0.08);
+max-width: 700px;
+}
+
+/* ---------- PROJECTS ---------- */
+.projects {
+display: flex;
+gap: 30px;
+flex-wrap: wrap;
+}
+
+.project-card {
+background: var(--card-bg);
+padding: 30px;
+border-radius: 20px;
+width: 280px;
+transition: 0.3s;
+box-shadow: 0 0 15px rgba(169,112,255,0.05);
+}
+
+.project-card:hover {
+transform: translateY(-8px);
+box-shadow: 0 0 20px rgba(169,112,255,0.3);
+}
+
+.status {
+color: var(--neon-soft);
+font-size: 14px;
+margin-top: 10px;
+}
+
+/* ---------- LINKS ---------- */
+.link-btn {
+display: inline-block;
+margin-top: 20px;
+padding: 12px 26px;
+border-radius: 25px;
+border: 2px solid var(--neon);
+color: var(--text-main);
+text-decoration: none;
+transition: 0.3s;
+}
+
+.link-btn:hover {
+background: rgba(169,112,255,0.1);
+box-shadow: 0 0 15px var(--neon);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+text-align: center;
+padding: 40px;
+opacity: 0.6;
+font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<h1>Renata Studio</h1>
+<div>
+<a href="#">Home</a>
+<a href="#">Projects</a>
+<a href="#">Support</a>
+<a href="#">Community</a>
+</div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+<h2>Welcome to Renata Studio</h2>
+<p>
+A range of apps and games with a range of uses..
+</p>
+
+<a href="#projects" class="hero-btn">View Projects</a>
+<a href="https://discord.gg/Dw93BeTZD6" class="hero-btn">Join Discord</a>
+</section>
+
+<!-- WHY WE EXIST -->
+<section class="section">
+<div class="card">
+<h3>Why We Exist</h3>
+<br>
+<p>
+Renata Studio builds games and apps to do a range of things. Some apps will help
+people learn, some will help people be productive, and some will just be for fun! :p
+</p>
+</div>
+</section>
+
+<!-- CURRENT PROJECTS -->
+<section class="section">
+<h3 style="margin-bottom:30px;">Current Projects</h3>
+
+<div class="projects">
+<div class="project-card">
+<h4>Sprout</h4>
+<p>Educational finance game</p>
+<div class="status">Status: In Development</div>
+</div>
+
+<div class="project-card">
+<h4>StudyPal</h4>
+<p>Homework & study tracker</p>
+<div class="status">Status: In Progress</div>
+</div>
+</div>
+</section>
+
+<!-- COMMUNITY -->
+<section class="section">
+<h3>Community</h3>
+<p style="max-width:600px; margin-top:15px;">
+Join the Renata Studio Discord!
+Feedback, updates, early access, and more. Suggest app ideas!
+</p>
+
+<a class="link-btn" href="https://discord.gg/Dw93BeTZD6">Join Discord</a>
+</section>
+
+<!-- SUPPORT -->
+<section class="section">
+<h3>Support the Studio</h3>
+<p style="max-width:600px; margin-top:15px;">
+Renata Studio is independently run. Support helps fund tools, hosting,
+and future projects. Support can also mean feedback, sharing, or participation, which you can do in the se
+</p>
+
+<a class="link-btn" href="https://ko-fi.com/renatastudios">Support on Ko-fi</a>
+</section>
+
+</main>
+
+<footer>
+Renata Studio © 2025 · Apps · Games · Tools
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+:root {
+  --bg-dark: #0b0614;
+  --bg-mid: #160a2b;
+  --card-bg: #1d0f3a;
+  --neon: #a970ff;
+  --neon-soft: rgba(169, 112, 255, 0.4);
+}
+
+body {
+    background-color: #160a2b;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 500px 0 0 0; /* manual offset for fixed nav */
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #7b4dff;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(22, 10, 43, 0.8); /* semi-transparent #160a2b */
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 20px;
+    z-index: 100;
+    border-bottom: 1px solid rgba(123, 77, 255, 0.3);
+}
+
+nav h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: white;
+}
+
+nav p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.nav-buttons {
+    margin-top: 20px;
+}
+
+.nav-buttons a {
+    display: inline-block;
+    margin: 0 15px;
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: text-shadow 0.3s;
+}
+
+.nav-buttons a:hover {
+    text-shadow: 0 0 10px #7b4dff, 0 0 20px #7b4dff;
+}
+
+section:first-of-type {
+    margin-top: 0; /* slightly raise the why we exist card */
+}
+
+#why-we-exist {
+    background-color: #2a1b4a; /* slightly lighter purple */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(123, 77, 255, 0.5); /* soft neon glow */
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-card {
+    background-color: #2a1b4a;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(123, 77, 255, 0.2);
+    max-width: 600px;
+    width: 100%;
+}
+
+.neon-pink {
+    color: #ff1493; /* brighter neon hot pink */
+    text-shadow: 0 0 10px #ff1493;
+    font-size: 2em;
+    margin: 0;
+}
+
+.status {
+    color: #7b4dff;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+#community .navy {
+    color: #4169e1; /* lighter blue */
+}
+
+.discord-button {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: none;
+    border: 1px solid #4169e1;
+    color: #4169e1;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.support-button {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: none;
+    border: 1px solid #7b4dff;
+    color: #7b4dff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(22, 10, 43, 0.5);
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px 0;
+}
